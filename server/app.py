@@ -31,7 +31,7 @@ app = create_app()
 
 def is_select(sql):
     clean_sql = sql.strip().upper()
-    return clean_sql.startswith("SELECT") or clean_sql.startswith("WITH")
+    return clean_sql.startswith("SELECT") or clean_sql.startswith("WITH") or clean_sql.startswith("SHOW")
 
 
 def str_is_true(string):
