@@ -48,6 +48,7 @@ def authenticate():
 @app.route("/impala")
 def impala():
     sql_query = request.args.get('q', '')
+    print("Sql query", sql_query)
     include_column_names = str_is_true(request.args.get('header', ''))
 
     # FIXME: Use proper permission setting, e.g. Apache Sentry
